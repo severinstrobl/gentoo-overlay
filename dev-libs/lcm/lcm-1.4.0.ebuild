@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python2_7 python3_{4,5,6} )
+PYTHON_COMPAT=( python3_{6,7,8} )
 
 inherit cmake-utils python-single-r1
 
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/lcm-proj/lcm/releases/download/v${PV}/${P}.zip -> ${
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="java lua python"
+IUSE="doc java lua python"
 
 RDEPEND="
 	dev-libs/glib:2
@@ -22,6 +22,9 @@ RDEPEND="
 	lua? ( >=dev-lang/lua-5.1:= )
 	python? ( ${PYTHON_DEPS} )
 "
+
+DEPEND="${RDEPEND}
+	doc? ( app-doc/doxygen )"
 
 src_configure() {
 	local mycmakeargs=(
@@ -32,3 +35,4 @@ src_configure() {
 
 	cmake-utils_src_configure
 }
+
