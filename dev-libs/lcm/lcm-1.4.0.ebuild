@@ -5,7 +5,7 @@ EAPI=7
 
 PYTHON_COMPAT=( python3_{6,7,8} )
 
-inherit cmake-utils python-single-r1
+inherit cmake python-single-r1
 
 DESCRIPTION="Lightweight Communications and Marshalling"
 HOMEPAGE="https://github.com/lcm-proj/lcm"
@@ -33,6 +33,6 @@ src_configure() {
 		-DLCM_ENABLE_PYTHON=$(usex python)
 	)
 
-	cmake-utils_src_configure
+	cmake_src_configure
 }
 
