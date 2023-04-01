@@ -22,8 +22,6 @@ RDEPEND="
 
 S=${WORKDIR}
 
-PATCHES=( "${FILESDIR}"/snappymail-2.9.5-starttls-fix.patch )
-
 src_install() {
 	webapp_src_preinst
 
