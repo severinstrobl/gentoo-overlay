@@ -17,7 +17,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="
-	>=dev-lang/php-7.3[curl,iconv,json,ssl,xml]
+	>=dev-lang/php-8.0[curl,iconv,ssl,xml]
 	virtual/httpd-php"
 
 S=${WORKDIR}
