@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="7"
@@ -17,7 +17,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="
-	>=dev-lang/php-8.0[curl,iconv,ssl,xml]
+	>=dev-lang/php-8.2[curl,iconv,ssl,xml]
 	virtual/httpd-php"
 
 S=${WORKDIR}
